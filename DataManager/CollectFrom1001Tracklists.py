@@ -1,11 +1,6 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
-from bs4 import BeautifulSoup
-import urllib.request
-import urllib.parse
-
-
 URL_1001TRACKLISTS_LIST_YEAR_HEAD = 'https://www.1001tracklists.com/year/2019/index'
 URL_1001TRACKLISTS_LIST_YEAR_TAIL = '.html'
 
@@ -26,7 +21,7 @@ def CollectFromListYearSelenium(year):
     MAX_INDEX = 0
 
     driver.get(BaseURL)
-    driver.implicitly_wait(3)
+    driver.implicitly_wait(10)
     MAX_INDEX = driver.find_element_by_xpath(XPATH_MAX_INDEX)
     print(MAX_INDEX, MAX_INDEX.text)
     return int(MAX_INDEX.text)
