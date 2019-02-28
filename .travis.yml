@@ -4,5 +4,7 @@ python:
 cache: pip
 install:
   - pip install -r requirements.txt
+  - pip insatll codecov
 script:
-  - python -m unittest
+  - coverage run -m unittest\
+  - bash < (curl -s https://codecov.io/bash)
