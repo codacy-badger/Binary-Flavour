@@ -1,8 +1,6 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
-from bs4 import BeautifulSoup
-import requests
 
 URL_1001TRACKLISTS_LIST_YEAR_HEAD = 'https://www.1001tracklists.com/year/'
 URL_1001TRACKLISTS_LIST_YEAR_MID  = '/index'
@@ -17,11 +15,12 @@ def CollectFromListYearBS4(year):
     BaseURL = 'https://www.1001tracklists.com/year/' + str(year) + '/index.html'
     print("Base URL was generated.", BaseURL)
     MAX_INDEX = lengthoflist[str(year)]
+    '''
     req = requests.get('https://www.1001tracklists.com/tracklist/2cms9wl9/charlotte-de-witte-new-years-day-awakenings-gashouder-amsterdam-netherlands-2018-01-01.html')
     html = req.text
     soup = BeautifulSoup(html, 'html.parser')
     print(soup)
-
+    '''
     return MAX_INDEX
 
 def CollectFromListYearSelenium(year):
