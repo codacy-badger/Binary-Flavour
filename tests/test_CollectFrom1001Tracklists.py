@@ -8,3 +8,5 @@ class TestCollectData(unittest.TestCase):
 
     def test_CollectFromListYearSelenium(self):
         self.assertEqual(1099, CollectFrom1001Tracklists.CollectFromListYearSelenium(2018))
+
+

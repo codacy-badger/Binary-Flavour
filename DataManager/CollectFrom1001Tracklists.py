@@ -25,7 +25,7 @@ def CollectFromListYearBS4(year):
 
 def CollectFromListYearSelenium(year):
     options = webdriver.ChromeOptions()
-    options.add_argument('headless')
+    options.add_argument('--headless')
     options.add_argument('window-size=1920x1080')
     options.add_argument("disable-gpu")
     driver = webdriver.Chrome('chromedriver', chrome_options=options)
