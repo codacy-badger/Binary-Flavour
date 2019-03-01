@@ -2,6 +2,7 @@ language: python
 python:
   - "3.6"
 cache: pip
+sudo: required
 addons: # get google-chrome-stable
   chrome: stable
 install: # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
